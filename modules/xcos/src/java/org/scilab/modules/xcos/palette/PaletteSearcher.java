@@ -54,7 +54,8 @@ public final class PaletteSearcher {
     str=str.toLowerCase();
         List<String> blockPaths = new ArrayList<String>();
         try {
-            IndexReader reader = DirectoryReader.open(mgr.getIndexWriter(), true);
+            //IndexReader reader = DirectoryReader.open(mgr.getIndexWriter(), true);
+            IndexReader reader = DirectoryReader.open(mgr.getIndexWriter(), true, true);
             IndexSearcher searcher = new IndexSearcher(reader);
         //enabled leading wild card entry 
         parser.setAllowLeadingWildcard(true);
